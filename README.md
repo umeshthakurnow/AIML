@@ -20,21 +20,45 @@ AIML Practice/
 
 ## Setup
 
-### 1. Create Virtual Environment (Optional but Recommended)
-```bash
-python -m venv venv
-venv\Scripts\activate
+### Prerequisites
+- Python 3.8 or higher installed
+- Iris dataset: `C:\Users\uasin\Downloads\iris_dataset.csv`
+
+### Installation Steps
+
+**Step 1:** Configure PowerShell Execution Policy
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### 2. Install Dependencies
-```bash
+**Step 2:** Create Virtual Environment
+```powershell
+python -m venv venv
+```
+
+**Step 3:** Activate Virtual Environment
+```powershell
+venv\Scripts\Activate.ps1
+```
+✓ Your prompt should now show `(venv)` prefix:
+```
+(venv) PS C:\Users\uasin\AIML Practice>
+```
+
+**Step 4:** Install Dependencies
+```powershell
 pip install -r requirements.txt
+```
+
+**Step 5:** Run the Script
+```powershell
+python logistic_regression.py
 ```
 
 ## Usage
 
 Run the logistic regression script:
-```bash
+```powershell
 python logistic_regression.py
 ```
 
@@ -75,9 +99,9 @@ Accuracy: 0.9333
 
 Classification Report:
               precision    recall  f1-score   support
-    setosa       1.00      1.00      1.00        10
-versicolor       0.90      0.90      0.90        10
- virginica       0.90      0.90      0.90        10
+      setosa       1.00      1.00      1.00        10
+  versicolor       0.90      0.90      0.90        10
+   virginica       0.90      0.90      0.90        10
 
     accuracy                           0.93        30
    macro avg       0.93      0.93      0.93        30
